@@ -7,31 +7,12 @@
 		<link rel="stylesheet" href="/styles/style.css" />
 	</head>
 	<body>
-		<div
-			style="
-				max-width: 1280px;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				margin: auto;
-				margin-top: 20px;
-				margin-bottom: 20px;
-			"
-		>
-			<img src="/images/pannkakor_citron.jpg" height="500px" width="100%" style="object-fit: cover" />
-			<div style="background-color: white; width: 100%">
-				<div
-					style="
-						padding: 20px;
-						padding-left: 36px;
-						padding-right: 40px;
-						padding-bottom: 32px;
-						padding-top: 12px;
-					"
-				>
-					<h2 style="color: #a10000">Enkelt recept på pannkakor</h2>
-					<div style="background-color: #ebebeb; padding: 16px; margin-bottom: 16px">
+		<div class="content-container-outer">
+			<img class="header-img" src="/images/pannkakor_citron.jpg" height="500px" width="100%" />
+			<div class="recipe-content">
+				<div class="recipe-content-container">
+					<h2 class="recipe-title">Enkelt recept på pannkakor</h2>
+					<div class="recipe-subtitle">
 						Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.
 					</div>
 					<div>
@@ -61,31 +42,19 @@
 					</div>
 					<div>
 						<h2>Serveringsförslag</h2>
-						<div style="display: flex; gap: 16px" class="servering-forslag-container">
-							<div class="servering-forslag-image">
-								<img
-									src="/images/pannkakor_jordgubbar.jpg"
-									height="467px"
-									width="100%"
-									style="object-fit: cover"
-								/>
-							</div>
-							<div class="servering-forslag-image">
-								<img
-									src="/images/pannkakor_med_garnyr.jpg"
-									height="467px"
-									width="100%"
-									style="object-fit: cover"
-								/>
-							</div>
-							<div class="servering-forslag-image">
-								<img
-									src="/images/pannkakor_sylt.jpg"
-									height="467px"
-									width="100%"
-									style="object-fit: cover"
-								/>
-							</div>
+						<div class="serving-suggestion-container">
+							<img
+								class="serving-suggestion-image"
+								src="/images/pannkakor_sylt.jpg"
+								height="467px"
+								width="100%"
+							/>
+							<img
+								class="serving-suggestion-image"
+								src="/images/pannkakor_sylt_och_gradde.jpg"
+								height="467px"
+								width="100%"
+							/>
 						</div>
 					</div>
 				</div>
