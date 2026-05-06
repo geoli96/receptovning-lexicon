@@ -70,7 +70,7 @@ body {
 	object-fit: cover;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
 	.serving-suggestion-container {
 		flex-direction: column;
 	}
