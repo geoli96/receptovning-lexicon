@@ -2,64 +2,94 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>Pannkakor recept</title>
 		<link rel="stylesheet" href="./styles/style.css" />
 	</head>
 	<body>
-		<div class="content-container-outer">
-			<div class="recipe-content">
-				<div class="recipe-content-container">
-					<h2 class="recipe-title">Enkelt recept på pannkakor</h2>
-					<div class="recipe-subtitle">
-						Gör traditionella tunna pannkakor med detta enkla och goda
-						pannkaksrecept.
-					</div>
-					<div>
-						<h2>Ingredienser</h2>
-						<div>För 4 portioner</div>
-						<ul>
-							<li>2 1/2 dl vetemjöl</li>
-							<li>1/2 tsk salt</li>
-							<li>6 dl mjölk</li>
-							<li>3 ägg</li>
-							<li>smör (till stekning)</li>
-							<li>sylt, bär elelr frukt till servering</li>
-						</ul>
-					</div>
-					<div>
-						<h2>Så här gör du</h2>
-						<ol>
-							<li>Blanda mjöl och salt i en bunke.</li>
-							<li>Vispa i hälften av mjölken och vispa till en slät smet.</li>
-							<li>Vispa i resten av mjölken och äggen.</li>
-							<li>Låt smeten vila ca 10 minuter.</li>
-							<li>
-								Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek-
-								eller pannkakspanna.
-							</li>
-							<li>Servera med sylt, bär eller frukt</li>
-						</ol>
-					</div>
-					<div>
-						<h2>Serveringsförslag</h2>
-						<div class="serving-suggestion-container">
-							<img
-								class="serving-suggestion-image"
-								src="./images/pannkakor_sylt.jpg"
-								height="467px"
-								width="100%"
-							/>
-							<img
-								class="serving-suggestion-image"
-								src="./images/pannkakor_sylt_och_gradde.jpg"
-								height="467px"
-								width="100%"
-							/>
-						</div>
-					</div>
+		<main>
+			<content class="content-container-outer">
+				<div class="recipe-container">
+					<section
+						class="recipe-content-container"
+						role="contentinfo"
+						aria-label="recipe instructions"
+					>
+						<header>
+							<h2 class="recipe-title">
+								Enkelt recept på pannkakor
+							</h2>
+							<p class="recipe-subtitle">
+								Gör traditionella tunna pannkakor med detta
+								enkla och goda pannkaksrecept.
+							</p>
+						</header>
+						<section
+							role="contentinfo"
+							aria-label="ingredienser"
+						>
+							<h2>Ingredienser</h2>
+							<div>För 4 portioner</div>
+							<ul>
+								<li>2 1/2 dl vetemjöl</li>
+								<li>1/2 tsk salt</li>
+								<li>6 dl mjölk</li>
+								<li>3 ägg</li>
+								<li>smör (till stekning)</li>
+								<li>
+									sylt, bär elelr frukt till servering
+								</li>
+							</ul>
+						</section>
+						<section
+							role="contentinfo"
+							aria-label="instruktioner"
+						>
+							<h2>Så här gör du</h2>
+							<ol>
+								<li>Blanda mjöl och salt i en bunke.</li>
+								<li>
+									Vispa i hälften av mjölken och vispa till
+									en slät smet.
+								</li>
+								<li>
+									Vispa i resten av mjölken och äggen.
+								</li>
+								<li>Låt smeten vila ca 10 minuter.</li>
+								<li>
+									Stek tunna pannkakor i lite smör, för
+									varje pannkaka, i en stek- eller
+									pannkakspanna.
+								</li>
+								<li>Servera med sylt, bär eller frukt</li>
+							</ol>
+						</section>
+						<section
+							role="contentinfo"
+							aria-label="serveringsforslag"
+						>
+							<h2>Serveringsförslag</h2>
+							<div class="serving-suggestion-container">
+								<img
+									class="serving-suggestion-image"
+									src="./images/pannkakor_sylt.jpg"
+									height="467px"
+									width="100%"
+								/>
+								<img
+									class="serving-suggestion-image"
+									src="./images/pannkakor_sylt_och_gradde.jpg"
+									height="467px"
+									width="100%"
+								/>
+							</div>
+						</section>
+					</section>
 				</div>
-			</div>
-		</div>
+			</content>
+		</main>
 	</body>
 </html>
