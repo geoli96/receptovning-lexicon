@@ -32,6 +32,10 @@ h4 {
 	line-height: var(--lh-tight);
 }
 
+main {
+	margin-top: 3rem;
+}
+
 .content-container {
 	max-width: 1280px;
 	display: flex;
@@ -96,6 +100,7 @@ h4 {
 	.serving-suggestion-container {
 		flex-direction: column;
 	}
+
 	.serving-suggestion-image {
 		width: 100%;
 	}
