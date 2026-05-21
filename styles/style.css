@@ -78,7 +78,7 @@ main {
 }
 
 .recipe-plating-suggestion {
-	figure {
+	.recipe-plating-suggestion__figure {
 		width: 50%;
 		margin: 0px;
 	}
@@ -96,8 +96,7 @@ main {
 		.recipe-plating-suggestion__image-container {
 			flex-direction: column;
 		}
-
-		figure {
+		.recipe-plating-suggestion__figure {
 			width: 100%;
 		}
 	}
