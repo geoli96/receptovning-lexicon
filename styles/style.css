@@ -20,6 +20,10 @@ body {
 
 	/* Increase line-height for better readability */
 	line-height: var(--lh-normal);
+
+	/* Set max-width and center content */
+	max-width: 1280px;
+	margin: auto;
 }
 
 h1,
@@ -36,13 +40,36 @@ main {
 	margin: 2rem;
 }
 
+.header-main {
+	margin: 2rem;
+	padding-left: var(--default-padding);
+	padding-right: var(--default-padding);
+
+	.header-main__nav,
+	.header-main__nav-submenu {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		list-style-type: none;
+		padding-left: 0px;
+		a {
+			color: blue;
+			text-decoration: none;
+		}
+		a:visited {
+			color: blue;
+		}
+	}
+	.header-main__nav-submenu {
+		gap: 3rem;
+	}
+}
+
 .content-container {
-	max-width: 1280px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: auto;
 	margin-block-start: var(--default-margin-vertical);
 	margin-block-end: var(--default-margin-vertical);
 }
