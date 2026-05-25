@@ -43,8 +43,8 @@ main {
 	justify-content: center;
 	align-items: center;
 	margin: auto;
-	margin-top: var(--default-margin-vertical);
-	margin-bottom: var(--default-margin-vertical);
+	margin-block-start: var(--default-margin-vertical);
+	margin-block-end: var(--default-margin-vertical);
 }
 
 .header-img {
@@ -58,7 +58,7 @@ main {
 
 .recipe {
 	padding: var(--default-padding);
-	padding-top: 1rem;
+	padding-block-start: 1rem;
 }
 
 .recipe-header {
@@ -69,7 +69,7 @@ main {
 	.recipe-header__subtitle {
 		background-color: #ebebeb;
 		padding: 1rem;
-		margin-bottom: 2rem;
+		margin-block-end: 2rem;
 	}
 }
 
