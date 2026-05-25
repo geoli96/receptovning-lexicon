@@ -60,8 +60,16 @@ main {
 			color: blue;
 		}
 	}
+	.header-main__nav {
+		gap: 1rem;
+	}
 	.header-main__nav-submenu {
-		gap: 3rem;
+		gap: 2rem;
+	}
+
+	.header-main__logo-figure {
+		margin: 0px;
+		width: 30px;
 	}
 }
 
@@ -119,6 +127,12 @@ main {
 }
 
 @media (max-width: 768px) {
+	.header-main {
+		.header-main__nav {
+			flex-direction: column;
+		}
+	}
+
 	.recipe-plating-suggestion {
 		.recipe-plating-suggestion__image-container {
 			flex-direction: column;
