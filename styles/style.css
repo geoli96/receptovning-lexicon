@@ -23,7 +23,8 @@ body {
 
 	/* Set max-width and center content */
 	max-width: 1280px;
-	margin: auto;
+	margin-inline: auto;
+	margin-block: auto;
 }
 
 h1,
@@ -37,13 +38,15 @@ h4 {
 }
 
 main {
-	margin: 2rem;
+	margin-inline: 2rem;
+	margin-block: 2rem;
 }
 
 .header-main {
-	margin: 2rem;
-	padding-left: var(--default-padding);
-	padding-right: var(--default-padding);
+	margin-inline: 2rem;
+	margin-block: 2rem;
+	padding-inline-start: var(--default-padding);
+	padding-inline-end: var(--default-padding);
 
 	.header-main__nav,
 	.header-main__nav-submenu {
@@ -69,7 +72,8 @@ main {
 	}
 
 	.header-main__logo-figure {
-		margin: 0px;
+		margin-inline: 0px;
+		margin-block: 0px;
 		width: 30px;
 	}
 }
@@ -93,7 +97,8 @@ main {
 }
 
 .recipe {
-	padding: var(--default-padding);
+	padding-inline: var(--default-padding);
+	padding-block: var(--default-padding);
 	padding-block-start: 1rem;
 }
 
@@ -104,7 +109,8 @@ main {
 
 	.recipe-header__subtitle {
 		background-color: #ebebeb;
-		padding: 1rem;
+		padding-inline: var(--default-padding);
+		padding-block: var(--default-padding);
 		margin-block-end: 2rem;
 	}
 }
@@ -116,7 +122,8 @@ main {
 .recipe-plating-suggestion {
 	.recipe-plating-suggestion__figure {
 		width: 50%;
-		margin: 0px;
+		margin-inline: 0px;
+		margin-block: 0px;
 	}
 	.recipe-plating-suggestion__plating-image {
 		object-fit: cover;
