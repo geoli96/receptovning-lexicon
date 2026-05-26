@@ -48,8 +48,11 @@ main {
 	padding-inline-start: var(--default-padding);
 	padding-inline-end: var(--default-padding);
 
-	.header-main__nav,
-	.header-main__nav-submenu {
+	.header-main__nav-login-link {
+		text-align: right;
+	}
+
+	.header-main__nav {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -65,10 +68,16 @@ main {
 		}
 	}
 	.header-main__nav {
+		li {
+			flex: 1;
+		}
+		li:first-of-type {
+			flex: 2;
+		}
+		li:last-of-type {
+			flex: 2;
+		}
 		gap: 1rem;
-	}
-	.header-main__nav-submenu {
-		gap: 3rem;
 	}
 
 	.header-main__logo-figure {
@@ -139,6 +148,12 @@ main {
 		.header-main__nav {
 			flex-direction: column;
 			align-items: stretch;
+			display: grid;
+			grid-template-columns: 2fr 2fr;
+			align-items: center;
+		}
+		.header-main__nav-login-link {
+			text-align: left;
 		}
 	}
 
