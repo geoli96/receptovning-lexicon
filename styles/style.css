@@ -109,8 +109,8 @@ main {
 
 	.recipe-header__subtitle {
 		background-color: #ebebeb;
-		padding-inline: var(--default-padding);
-		padding-block: var(--default-padding);
+		padding-inline: 1rem;
+		padding-block: 1rem;
 		margin-block-end: 2rem;
 	}
 }
