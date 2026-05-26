@@ -50,6 +50,7 @@ main {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
 		list-style-type: none;
 		padding-left: 0px;
 		a {
@@ -130,6 +131,7 @@ main {
 	.header-main {
 		.header-main__nav {
 			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 
