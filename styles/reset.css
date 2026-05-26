@@ -3,13 +3,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
-
-
-/* min body height */
-body {
-  min-height: 100vh;
+	box-sizing: border-box;
 }
 
 /* responsive images/videos */
@@ -17,6 +11,6 @@ img,
 picture,
 svg,
 video {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
