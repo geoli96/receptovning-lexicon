@@ -37,11 +37,6 @@ body {
 
 	/* Increase line-height for better readability */
 	line-height: var(--lh-normal);
-
-	/* Set max-width and center content */
-	max-width: 1280px;
-	margin-inline: auto;
-	margin-block: auto;
 }
 
 h1,
@@ -52,9 +47,4 @@ h4 {
 	/* less line-height on headings to keep them more compact */
 	/* usually 1.1 or maybe 1 depending on font choice */
 	line-height: var(--lh-tight);
-}
-
-main {
-	margin-inline: 2rem;
-	margin-block: 2rem;
 }

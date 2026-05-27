@@ -1,3 +1,10 @@
+body {
+	/* Set max-width and center content */
+	max-width: 1280px;
+	margin-inline: auto;
+	margin-block: auto;
+}
+
 .header-main {
 	margin-inline: 2rem;
 	margin-block: 2rem;
@@ -43,7 +50,20 @@
 	}
 }
 
-.content-container {
+.header-img {
+	object-fit: cover;
+}
+
+.header-img {
+	object-fit: cover;
+}
+
+main {
+	margin-inline: 2rem;
+	margin-block: 2rem;
+}
+
+.content-container-outer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -52,52 +72,10 @@
 	margin-block-end: var(--default-margin-vertical);
 }
 
-.header-img {
-	object-fit: cover;
-}
-
-.recipe-container {
+.content-container {
 	background-color: white;
 	min-height: 1200px;
 	width: 100%;
-}
-
-.recipe {
-	padding-inline: var(--default-padding);
-	padding-block: var(--default-padding);
-	padding-block-start: 1rem;
-}
-
-.recipe-header {
-	.recipe-header__title {
-		color: var(--primary-heading-color);
-	}
-
-	.recipe-header__subtitle {
-		background-color: #ebebeb;
-		padding-inline: 1rem;
-		padding-block: 1rem;
-		margin-block-end: 2rem;
-	}
-}
-
-.header-img {
-	object-fit: cover;
-}
-
-.recipe-plating-suggestion {
-	.recipe-plating-suggestion__figure {
-		width: 50%;
-		margin-inline: 0px;
-		margin-block: 0px;
-	}
-	.recipe-plating-suggestion__plating-image {
-		object-fit: cover;
-	}
-	.recipe-plating-suggestion__image-container {
-		display: flex;
-		gap: 1.5rem;
-	}
 }
 
 @media (max-width: 768px) {
@@ -111,15 +89,6 @@
 		}
 		.header-main__nav-login-link {
 			text-align: left;
-		}
-	}
-
-	.recipe-plating-suggestion {
-		.recipe-plating-suggestion__image-container {
-			flex-direction: column;
-		}
-		.recipe-plating-suggestion__figure {
-			width: 100%;
 		}
 	}
 }

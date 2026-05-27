@@ -4,8 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Pannkakor recept</title>
-		<link rel="stylesheet" href="../styles/reset.css" />
-		<link rel="stylesheet" href="../styles/recept.css" />
+		<link rel="stylesheet" href="./styles/_reset.css" />
+		<link rel="stylesheet" href="./styles/_layout.css" />
+		<link rel="stylesheet" href="./styles/recept.css" />
 	</head>
 	<body>
 		<header class="header-main">
@@ -34,37 +35,32 @@
 			</nav>
 		</header>
 		<main>
-			<content class="content-container">
-				<div class="recipe-container">
+			<content class="content-container-outer">
+				<div class="content-container">
 					<section
-						class="recipe"
+						class="recipes-list"
 						role="contentinfo"
 						aria-label="recipe instructions"
 					>
-						<header class="recipe-header">
-							<h1 class="recipe-header__title">Recept</h1>
+						<header class="recipes-list-header">
+							<h1 class="recipes-list-header__title">Recept</h1>
 						</header>
-						<div
-							class="recipe-grid"
+						<section
+							class="recipes-grid"
 							role="contentinfo"
-							aria-label="ingredienser"
+							aria-label="recipes list"
 						>
-							<section
-								class="recipe-ingredients"
+							<div
+								class="recipe-list-item"
 								role="contentinfo"
-								aria-label="ingredienser"
+								aria-label="recipe with description and image"
 							>
 								<a href="/index.html">
-									<figure
-										class="recipe-plating-suggestion__figure"
-										style="padding: 0px; margin: 0px"
-									>
+									<figure class="recipe-list-item__figure">
 										<img
-											class="recipe-plating-suggestion__plating-image"
 											src="./images/pannkakor_sylt_och_gradde.jpg"
 											width="100%"
-											alt="pannkakor med sylt och grädde"
-											style="object-fit: cover"
+											alt="Tunna traditionella pannkakor med sylt och grädde"
 										/>
 									</figure>
 								</a>
@@ -74,86 +70,8 @@
 									Gör traditionella tunna pannkakor med detta enkla och goda
 									pannkaksrecept.
 								</p>
-							</section>
-							<section
-								class="recipe-ingredients"
-								role="contentinfo"
-								aria-label="ingredienser"
-							>
-								<a href="/index.html">
-									<figure
-										class="recipe-plating-suggestion__figure"
-										style="padding: 0px; margin: 0px"
-									>
-										<img
-											class="recipe-plating-suggestion__plating-image"
-											src="./images/pannkakor_sylt_och_gradde.jpg"
-											width="100%"
-											alt="pannkakor med sylt och grädde"
-											style="object-fit: cover"
-										/>
-									</figure>
-								</a>
-
-								<h2><a href="/index.html">Enkelt recept på pannkakor </a></h2>
-								<p>
-									Gör traditionella tunna pannkakor med detta enkla och goda
-									pannkaksrecept.
-								</p>
-							</section>
-							<section
-								class="recipe-ingredients"
-								role="contentinfo"
-								aria-label="ingredienser"
-							>
-								<a href="/index.html">
-									<figure
-										class="recipe-plating-suggestion__figure"
-										style="padding: 0px; margin: 0px"
-									>
-										<img
-											class="recipe-plating-suggestion__plating-image"
-											src="./images/pannkakor_sylt_och_gradde.jpg"
-											width="100%"
-											alt="pannkakor med sylt och grädde"
-											style="object-fit: cover"
-										/>
-									</figure>
-								</a>
-
-								<h2><a href="/index.html">Enkelt recept på pannkakor </a></h2>
-								<p>
-									Gör traditionella tunna pannkakor med detta enkla och goda
-									pannkaksrecept.
-								</p>
-							</section>
-							<section
-								class="recipe-ingredients"
-								role="contentinfo"
-								aria-label="ingredienser"
-							>
-								<a href="/index.html">
-									<figure
-										class="recipe-plating-suggestion__figure"
-										style="padding: 0px; margin: 0px"
-									>
-										<img
-											class="recipe-plating-suggestion__plating-image"
-											src="./images/pannkakor_sylt_och_gradde.jpg"
-											width="100%"
-											alt="pannkakor med sylt och grädde"
-											style="object-fit: cover"
-										/>
-									</figure>
-								</a>
-
-								<h2><a href="/index.html">Enkelt recept på pannkakor </a></h2>
-								<p>
-									Gör traditionella tunna pannkakor med detta enkla och goda
-									pannkaksrecept.
-								</p>
-							</section>
-						</div>
+							</div>
+						</section>
 					</section>
 				</div>
 			</content>

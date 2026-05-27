@@ -1,0 +1,44 @@
+.recipe {
+	padding-inline: var(--default-padding);
+	padding-block: var(--default-padding);
+	padding-block-start: 1rem;
+}
+
+.recipe-header {
+	.recipe-header__title {
+		color: var(--primary-heading-color);
+	}
+
+	.recipe-header__subtitle {
+		background-color: #ebebeb;
+		padding-inline: 1rem;
+		padding-block: 1rem;
+		margin-block-end: 2rem;
+	}
+}
+
+.recipe-plating-suggestion {
+	.recipe-plating-suggestion__figure {
+		width: 50%;
+		margin-inline: 0px;
+		margin-block: 0px;
+	}
+	.recipe-plating-suggestion__plating-image {
+		object-fit: cover;
+	}
+	.recipe-plating-suggestion__image-container {
+		display: flex;
+		gap: 1.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.recipe-plating-suggestion {
+		.recipe-plating-suggestion__image-container {
+			flex-direction: column;
+		}
+		.recipe-plating-suggestion__figure {
+			width: 100%;
+		}
+	}
+}
