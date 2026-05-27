@@ -73,6 +73,9 @@ main {
 }
 
 .content-container {
+	padding-inline: var(--default-padding);
+	padding-block: var(--default-padding);
+	padding-block-start: 1rem;
 	background-color: white;
 	min-height: 1200px;
 	width: 100%;

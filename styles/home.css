@@ -1,9 +1,3 @@
-.recipe {
-	padding-inline: var(--default-padding);
-	padding-block: var(--default-padding);
-	padding-block-start: 1rem;
-}
-
 .recipe-header {
 	.recipe-header__title {
 		color: var(--primary-heading-color);

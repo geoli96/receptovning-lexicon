@@ -17,12 +17,6 @@
 	}
 }
 
-.recipes-list {
-	padding-inline: var(--default-padding);
-	padding-block: var(--default-padding);
-	padding-block-start: 1rem;
-}
-
 .recipe-list-item {
 	.recipe-list-item__figure {
 		padding: 0px;
