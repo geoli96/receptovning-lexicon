@@ -25,7 +25,6 @@ body {
 	max-width: 1280px;
 	margin-inline: auto;
 	margin-block: auto;
-	background-color: green !important;
 }
 
 h1,
@@ -107,6 +106,25 @@ main {
 	width: 100%;
 }
 
+.recipe-grid {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	gap: 40px;
+	img {
+		aspect-ratio: 5/3;
+	}
+	h2 {
+		margin-bottom: 4px;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	a:visited {
+		color: inherit;
+	}
+}
+
 .recipe {
 	padding-inline: var(--default-padding);
 	padding-block: var(--default-padding);
@@ -157,6 +175,10 @@ main {
 		.header-main__nav-login-link {
 			text-align: left;
 		}
+	}
+
+	.recipe-grid {
+		grid-template-columns: 1fr;
 	}
 
 	.recipe-plating-suggestion {
