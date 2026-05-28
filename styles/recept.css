@@ -6,7 +6,7 @@
 		aspect-ratio: 5/3;
 	}
 	h2 {
-		margin-bottom: 4px;
+		margin-block-end: 4px;
 	}
 	a {
 		color: inherit;
@@ -19,8 +19,10 @@
 
 .recipe-list-item {
 	.recipe-list-item__figure {
-		padding: 0px;
-		margin: 0px;
+		padding-inline: 0px;
+		padding-block: 0px;
+		margin-inline: 0px;
+		margin-block: 0px;
 		img {
 			object-fit: cover;
 		}
