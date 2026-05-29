@@ -1,119 +1,97 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Pannkakor recept</title>
-		<link rel="stylesheet" href="{{ baseurl }}/styles/_reset.css" />
-		<link rel="stylesheet" href="./styles/_layout.css" />
-		<link rel="stylesheet" href="./styles/home.css" />
-	</head>
-	<body>
-		<header class="header-main">
-			<!-- Navigation menu -->
-			<nav>
-				<ul class="header-main__nav">
-					<li>
-						<a href="/index.html">
-							<!-- Logo image, redirects to home page -->
-							<figure class="header-main__logo-figure">
-								<img
-									src="/images/Official_CSS_Logo.png"
-									width="100%"
-									alt="CSS Logo"
-								/>
-							</figure>
-						</a>
-					</li>
-					<li><a href="/recept.html">Recept</a></li>
-					<li><a href="/about.html">Om oss</a></li>
-					<li><a href="/kontakt.html">Kontakt</a></li>
-					<li class="header-main__nav-login-link">
-						<a href="#">Logga in</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<content class="content-container-outer">
-				<div class="content-container">
-					<section role="contentinfo" aria-label="recept instruktioner">
-						<header class="recipe-header">
-							<h1 class="recipe-header__title">Enkelt recept på pannkakor</h1>
-							<p class="recipe-header__subtitle">
-								Gör traditionella tunna pannkakor med detta enkla och goda
-								pannkaksrecept.
-							</p>
-						</header>
-						<section
-							class="recipe-ingredients"
-							role="contentinfo"
-							aria-label="ingredienser"
-						>
-							<h2>Ingredienser</h2>
-							<p>För 4 portioner</p>
-							<ul>
-								<li>2 1/2 dl vetemjöl</li>
-								<li>1/2 tsk salt</li>
-								<li>6 dl mjölk</li>
-								<li>3 ägg</li>
-								<li>smör (till stekning)</li>
-								<li>sylt, bär elelr frukt till servering</li>
-							</ul>
-						</section>
-						<section
-							class="recipe-instructions"
-							role="contentinfo"
-							aria-label="instruktioner"
-						>
-							<h2>Så här gör du</h2>
-							<ol>
-								<li>Blanda mjöl och salt i en bunke.</li>
-								<li>Vispa i hälften av mjölken och vispa till en slät smet.</li>
-								<li>Vispa i resten av mjölken och äggen.</li>
-								<li>Låt smeten vila ca 10 minuter.</li>
-								<li>
-									Stek tunna pannkakor i lite smör, för varje pannkaka, i en
-									stek- eller pannkakspanna.
-								</li>
-								<li>Servera med sylt, bär eller frukt</li>
-							</ol>
-						</section>
-						<section
-							class="recipe-plating-suggestion"
-							role="contentinfo"
-							aria-label="serveringsforslag"
-						>
-							<h2>Serveringsförslag</h2>
-							<div class="recipe-plating-suggestion__image-container">
-								<figure class="recipe-plating-suggestion__figure">
-									<img
-										class="recipe-plating-suggestion__plating-image"
-										src="./images/pannkakor_sylt.jpg"
-										height="467px"
-										width="100%"
-										alt="pannkakor med sylt"
-									/>
-									<figcaption>Fig.1 Pannkakor serverat med sylt</figcaption>
-								</figure>
-								<figure class="recipe-plating-suggestion__figure">
-									<img
-										class="recipe-plating-suggestion__plating-image"
-										src="./images/pannkakor_sylt_och_gradde.jpg"
-										height="467px"
-										width="100%"
-										alt="pannkakor med sylt och grädde"
-									/>
 
-									<figcaption>
-										Fig.2 Pannkakor serverat med sylt och grädde
-									</figcaption>
-								</figure>
-							</div>
-						</section>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pannkakor recept</title>
+	<link rel="stylesheet" href="./styles/_reset.css" />
+	<link rel="stylesheet" href="./styles/_layout.css" />
+	<link rel="stylesheet" href="./styles/home.css" />
+</head>
+
+<body>
+	<header class="header-main">
+		<!-- Navigation menu -->
+		<nav>
+			<ul class="header-main__nav">
+				<li>
+					<a href="/index.html">
+						<!-- Logo image, redirects to home page -->
+						<figure class="header-main__logo-figure">
+							<img src="/images/Official_CSS_Logo.png" width="100%" alt="CSS Logo" />
+						</figure>
+					</a>
+				</li>
+				<li><a href="/recept.html">Recept</a></li>
+				<li><a href="/about.html">Om oss</a></li>
+				<li><a href="/kontakt.html">Kontakt</a></li>
+				<li class="header-main__nav-login-link">
+					<a href="#">Logga in</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<content class="content-container-outer">
+			<div class="content-container">
+				<section role="contentinfo" aria-label="recept instruktioner">
+					<header class="recipe-header">
+						<h1 class="recipe-header__title">Enkelt recept på pannkakor</h1>
+						<p class="recipe-header__subtitle">
+							Gör traditionella tunna pannkakor med detta enkla och goda
+							pannkaksrecept.
+						</p>
+					</header>
+					<section class="recipe-ingredients" role="contentinfo" aria-label="ingredienser">
+						<h2>Ingredienser</h2>
+						<p>För 4 portioner</p>
+						<ul>
+							<li>2 1/2 dl vetemjöl</li>
+							<li>1/2 tsk salt</li>
+							<li>6 dl mjölk</li>
+							<li>3 ägg</li>
+							<li>smör (till stekning)</li>
+							<li>sylt, bär elelr frukt till servering</li>
+						</ul>
 					</section>
-				</div>
-			</content>
-		</main>
-	</body>
+					<section class="recipe-instructions" role="contentinfo" aria-label="instruktioner">
+						<h2>Så här gör du</h2>
+						<ol>
+							<li>Blanda mjöl och salt i en bunke.</li>
+							<li>Vispa i hälften av mjölken och vispa till en slät smet.</li>
+							<li>Vispa i resten av mjölken och äggen.</li>
+							<li>Låt smeten vila ca 10 minuter.</li>
+							<li>
+								Stek tunna pannkakor i lite smör, för varje pannkaka, i en
+								stek- eller pannkakspanna.
+							</li>
+							<li>Servera med sylt, bär eller frukt</li>
+						</ol>
+					</section>
+					<section class="recipe-plating-suggestion" role="contentinfo" aria-label="serveringsforslag">
+						<h2>Serveringsförslag</h2>
+						<div class="recipe-plating-suggestion__image-container">
+							<figure class="recipe-plating-suggestion__figure">
+								<img class="recipe-plating-suggestion__plating-image" src="./images/pannkakor_sylt.jpg"
+									height="467px" width="100%" alt="pannkakor med sylt" />
+								<figcaption>Fig.1 Pannkakor serverat med sylt</figcaption>
+							</figure>
+							<figure class="recipe-plating-suggestion__figure">
+								<img class="recipe-plating-suggestion__plating-image"
+									src="./images/pannkakor_sylt_och_gradde.jpg" height="467px" width="100%"
+									alt="pannkakor med sylt och grädde" />
+
+								<figcaption>
+									Fig.2 Pannkakor serverat med sylt och grädde
+								</figcaption>
+							</figure>
+						</div>
+					</section>
+				</section>
+			</div>
+		</content>
+	</main>
+</body>
+
 </html>
