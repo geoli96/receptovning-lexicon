@@ -61,24 +61,18 @@ body {
 main {
 	margin-inline: 2rem;
 	margin-block: 2rem;
-}
-
-.content-container-outer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-block-start: var(--default-margin-vertical);
-	margin-block-end: var(--default-margin-vertical);
+	background-color: white;
 }
 
 .content-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-block-start: var(--default-margin-vertical);
+	margin-block-end: var(--default-margin-vertical);
 	padding-inline: var(--default-padding);
 	padding-block: var(--default-padding);
-	padding-block-start: 1rem;
-	background-color: white;
 	min-height: 1200px;
-	width: 100%;
 }
 
 @media (max-width: 768px) {
