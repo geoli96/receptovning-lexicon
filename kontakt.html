@@ -97,7 +97,9 @@
 				event.preventDefault();
 				const formData = new FormData(event.target);
 				const formObject = Object.fromEntries(formData.entries());
-				return formObject;
+				const { name, email, subject, message } = formObject;
+				alert(`Message sent!`);
+				form.reset();
 			});
 		</script>
 	</body>
