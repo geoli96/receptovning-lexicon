@@ -43,80 +43,82 @@
 					</header>
 					<section
 						class="recipes-grid"
+						id="recipes-grid"
 						role="contentinfo"
 						aria-label="recept lista"
-					>
-						<article class="recipe-list-item">
-							<a href="/index.html">
-								<figure class="recipe-list-item__figure">
-									<img
-										src="./images/pannkakor_sylt_och_gradde.jpg"
-										width="100%"
-										alt="Tunna traditionella pannkakor med sylt och grädde"
-									/>
-								</figure>
-							</a>
-
-							<h2><a href="/index.html">Enkelt recept på pannkakor </a></h2>
-							<p>
-								Gör traditionella tunna pannkakor med detta enkla och goda
-								pannkaksrecept.
-							</p>
-						</article>
-						<article class="recipe-list-item">
-							<a href="/index.html">
-								<figure class="recipe-list-item__figure">
-									<img
-										src="./images/pannkakor_sylt_och_gradde.jpg"
-										width="100%"
-										alt="Tunna traditionella pannkakor med sylt och grädde"
-									/>
-								</figure>
-							</a>
-
-							<h2><a href="/index.html">Enkelt recept på pannkakor </a></h2>
-							<p>
-								Gör traditionella tunna pannkakor med detta enkla och goda
-								pannkaksrecept.
-							</p>
-						</article>
-						<article class="recipe-list-item">
-							<a href="/index.html">
-								<figure class="recipe-list-item__figure">
-									<img
-										src="./images/pannkakor_sylt_och_gradde.jpg"
-										width="100%"
-										alt="Tunna traditionella pannkakor med sylt och grädde"
-									/>
-								</figure>
-							</a>
-
-							<h2><a href="/index.html">Enkelt recept på pannkakor </a></h2>
-							<p>
-								Gör traditionella tunna pannkakor med detta enkla och goda
-								pannkaksrecept.
-							</p>
-						</article>
-						<article class="recipe-list-item">
-							<a href="/index.html">
-								<figure class="recipe-list-item__figure">
-									<img
-										src="./images/pannkakor_sylt_och_gradde.jpg"
-										width="100%"
-										alt="Tunna traditionella pannkakor med sylt och grädde"
-									/>
-								</figure>
-							</a>
-
-							<h2><a href="/index.html">Enkelt recept på pannkakor </a></h2>
-							<p>
-								Gör traditionella tunna pannkakor med detta enkla och goda
-								pannkaksrecept.
-							</p>
-						</article>
-					</section>
+					></section>
 				</section>
 			</content>
 		</main>
+		<script>
+			const recipes = [
+				{
+					title: "Enkelt recept på pannkakor",
+					page: "index",
+					imgName: "pannkakor_sylt_och_gradde",
+					imgDescription: "Tunna traditionella pannkakor med sylt och grädde",
+					description:
+						"Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.",
+				},
+				{
+					title: "Enkelt recept på pannkakor",
+					page: "index",
+					imgName: "pannkakor_sylt_och_gradde",
+					imgDescription: "Tunna traditionella pannkakor med sylt och grädde",
+					description:
+						"Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.",
+				},
+				{
+					title: "Enkelt recept på pannkakor",
+					page: "index",
+					imgName: "pannkakor_sylt_och_gradde",
+					imgDescription: "Tunna traditionella pannkakor med sylt och grädde",
+					description:
+						"Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.",
+				},
+				{
+					title: "Enkelt recept på pannkakor",
+					page: "index",
+					imgName: "pannkakor_sylt_och_gradde",
+					imgDescription: "Tunna traditionella pannkakor med sylt och grädde",
+					description:
+						"Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.",
+				},
+			];
+			const recipeListItem = document.getElementById("recipes-grid");
+			recipes.forEach((recipe) => {
+				const article = document.createElement("article");
+				article.className = "recipe-list-item";
+				article.id = "recipe-list-item";
+
+				const imgLink = document.createElement("a");
+				imgLink.href = `/${recipe.page}.html`;
+
+				const figure = document.createElement("figure");
+				figure.className = "recipe-list-item__figure";
+
+				const img = document.createElement("img");
+				img.src = `./images/${recipe.imgName}.jpg`;
+				img.style.width = "100%";
+				img.alt = recipe.imgDescription;
+
+				article.append(imgLink);
+				imgLink.append(figure);
+				figure.append(img);
+
+				const title = document.createElement("h2");
+				const titleLink = document.createElement("a");
+				titleLink.href = `/${recipe.page}.html`;
+				titleLink.innerText = recipe.title;
+				const description = document.createElement("p");
+				description.innerHTML = recipe.description;
+
+				title.appendChild(titleLink);
+				article.append(title);
+				article.append(description);
+
+				recipeListItem.append(article);
+			});
+		</script>
 	</body>
 </html>
