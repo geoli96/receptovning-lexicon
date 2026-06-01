@@ -19,7 +19,7 @@
 		align-items: flex-start;
 	}
 	.contact-form__submit-button {
-		background-color: var(--btn-primary-color);
+		background-color: var(--btn-primary-bgColor);
 		color: var(--btn-primary-textColor);
 		padding: var(--btn-primary-padding);
 		border-radius: var(--btn-primary-borderRadius);
