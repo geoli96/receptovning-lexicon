@@ -1,6 +1,7 @@
 .recipe-header {
 	.recipe-header__title {
 		color: var(--primary-heading-color);
+		margin-top: 0px;
 	}
 
 	.recipe-header__subtitle {

@@ -32,6 +32,7 @@
 .recipes-list-header {
 	.recipes-list-header__title {
 		color: var(--primary-heading-color);
+		margin-top: 0px;
 	}
 
 	.recipe-list-header__subtitle {
