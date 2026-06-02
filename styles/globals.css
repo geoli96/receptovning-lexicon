@@ -1,12 +1,8 @@
 :root {
 	/* btn-primary */
 	--btn-primary-padding: 0.8rem;
-	--btn-primary-bgColor: #008cba;
+	--btn-primary-bgColor: #6700ff;
 	--btn-primary-borderRadius: 4px;
 	--btn-primary-border: 0px;
-	--btn-primary-textColor: color(
-		from var(--btn-primary-bgColor) xyz clamp(0, (0.36 / y - 1) * infinity, 1)
-			clamp(0, (0.36 / y - 1) * infinity, 1)
-			clamp(0, (0.36 / y - 1) * infinity, 1) / 1
-	);
+	--btn-primary-textColor: white;
 }

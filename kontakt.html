@@ -26,9 +26,28 @@
 							</figure>
 						</a>
 					</li>
-					<li><a href="/recept.html">Recept</a></li>
-					<li><a href="/about.html">Om oss</a></li>
-					<li><a href="/kontakt.html">Kontakt</a></li>
+					<li class="header-main__nav-submenu">
+						<ul>
+							<li><a href="/recept.html">Recept</a></li>
+							<li>
+								<a href="/skicka-in-recept.html">Skicka in ditt recept</a>
+							</li>
+							<li><a href="/about.html">Om oss</a></li>
+							<li><a href="/kontakt.html">Kontakt</a></li>
+						</ul>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/recept.html">Recept</a>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/skicka-in-recept.html">Skicka in ditt recept</a>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/about.html">Om oss</a>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/kontakt.html">Kontakt</a>
+					</li>
 					<li class="header-main__nav-login-link">
 						<a href="#">Logga in</a>
 					</li>
@@ -44,7 +63,7 @@
 					<section role="contentinfo" aria-label="kontaktformulär">
 						<form id="contact-form" class="contact-form" method="post">
 							<p>
-								<label for="name">Name:</label>
+								<label for="name">Namn:</label>
 								<input
 									type="text"
 									id="name"
@@ -73,7 +92,7 @@
 								</select>
 							</p>
 							<p>
-								<label for="message">Message:</label>
+								<label for="message">Meddelande:</label>
 								<textarea
 									required
 									id="message"
@@ -83,7 +102,7 @@
 							</p>
 							<p>
 								<button class="contact-form__submit-button" type="submit">
-									Send message
+									Skicka meddelande
 								</button>
 							</p>
 						</form>
