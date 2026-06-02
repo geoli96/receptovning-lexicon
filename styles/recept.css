@@ -15,6 +15,14 @@
 	a:visited {
 		color: inherit;
 	}
+
+	.delete-recipe-button {
+		background-color: var(--btn-primary-bgColor);
+		color: var(--btn-primary-textColor);
+		padding: var(--btn-primary-padding);
+		border-radius: var(--btn-primary-borderRadius);
+		border: var(--btn-primary-border);
+	}
 }
 
 .recipe-list-item {

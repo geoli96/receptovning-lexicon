@@ -70,56 +70,30 @@
 			</content>
 		</main>
 		<script>
-			const recipes = [
-				{
-					title: "Enkelt recept på pannkakor",
-					page: "index",
-					imgName: "pannkakor_sylt_och_gradde",
-					imgDescription: "Tunna traditionella pannkakor med sylt och grädde",
-					description:
-						"Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.",
-				},
-				{
-					title: "Enkelt recept på pannkakor",
-					page: "index",
-					imgName: "pannkakor_sylt_och_gradde",
-					imgDescription: "Tunna traditionella pannkakor med sylt och grädde",
-					description:
-						"Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.",
-				},
-				{
-					title: "Enkelt recept på pannkakor",
-					page: "index",
-					imgName: "pannkakor_sylt_och_gradde",
-					imgDescription: "Tunna traditionella pannkakor med sylt och grädde",
-					description:
-						"Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.",
-				},
-				{
-					title: "Enkelt recept på pannkakor",
-					page: "index",
-					imgName: "pannkakor_sylt_och_gradde",
-					imgDescription: "Tunna traditionella pannkakor med sylt och grädde",
-					description:
-						"Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.",
-				},
-			];
+			const uploadedRecipes = Object.keys(localStorage).map((recipeKey) =>
+				JSON.parse(localStorage.getItem(recipeKey)),
+			);
 			const recipeListItem = document.getElementById("recipes-grid");
-			recipes.forEach((recipe) => {
+			if (uploadedRecipes.length === 0) {
+				const p = document.createElement("p");
+				p.innerText = "Inga recept upplagda";
+				recipeListItem.append(p);
+			}
+			uploadedRecipes.forEach((recipe) => {
 				const article = document.createElement("article");
 				article.className = "recipe-list-item";
 				article.id = "recipe-list-item";
 
 				const imgLink = document.createElement("a");
-				imgLink.href = `/${recipe.page}.html`;
+				imgLink.href = `/${recipe.recipe_page}.html`;
 
 				const figure = document.createElement("figure");
 				figure.className = "recipe-list-item__figure";
 
 				const img = document.createElement("img");
-				img.src = `./images/${recipe.imgName}.jpg`;
+				img.src = `./images/pannkakor_sylt_och_gradde.jpg`;
 				img.style.width = "100%";
-				img.alt = recipe.imgDescription;
+				img.alt = "Pannkakor serverat med sylt och grädde";
 
 				article.append(imgLink);
 				imgLink.append(figure);
@@ -127,14 +101,41 @@
 
 				const title = document.createElement("h2");
 				const titleLink = document.createElement("a");
-				titleLink.href = `/${recipe.page}.html`;
-				titleLink.innerText = recipe.title;
+				titleLink.href = `/index.html`;
+				titleLink.innerText = recipe.recipe_name;
 				const description = document.createElement("p");
-				description.innerHTML = recipe.description;
+				description.innerText = recipe.recipe_description;
+
+				const author = document.createElement("p");
+				author.innerText =
+					"Skapat av " +
+					recipe.author_name[0].toUpperCase() +
+					recipe.author_name.slice(1);
 
 				title.appendChild(titleLink);
 				article.append(title);
 				article.append(description);
+				article.append(author);
+
+				const removeRecipeButton = document.createElement("button");
+				removeRecipeButton.onclick = () => {
+					localStorage.removeItem(
+						`${recipe.author_name}-${recipe.recipe_name}`,
+					);
+					article.remove();
+					const recipeListItem = document.getElementById("recipes-grid");
+					const uploadedRecipes = Object.keys(localStorage).map((recipeKey) =>
+						JSON.parse(localStorage.getItem(recipeKey)),
+					);
+					if (uploadedRecipes.length === 0) {
+						const p = document.createElement("p");
+						p.innerText = "Inga recept upplagda";
+						recipeListItem.append(p);
+					}
+				};
+				removeRecipeButton.className = "delete-recipe-button";
+				removeRecipeButton.innerHTML = "Ta bort recept";
+				article.append(removeRecipeButton);
 
 				recipeListItem.append(article);
 			});
