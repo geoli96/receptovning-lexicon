@@ -1,0 +1,28 @@
+.contact-form-header {
+	.contact-form-header__title {
+		color: var(--primary-heading-color);
+		margin-top: 0px;
+	}
+
+	.recipe-list-header__subtitle {
+		background-color: #ebebeb;
+		padding-inline: 1rem;
+		padding-block: 1rem;
+		margin-block-end: 2rem;
+	}
+}
+
+.contact-form {
+	p {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.contact-form__submit-button {
+		background-color: var(--btn-primary-bgColor);
+		color: var(--btn-primary-textColor);
+		padding: var(--btn-primary-padding);
+		border-radius: var(--btn-primary-borderRadius);
+		border: var(--btn-primary-border);
+	}
+}

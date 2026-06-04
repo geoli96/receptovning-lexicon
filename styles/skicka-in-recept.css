@@ -1,0 +1,28 @@
+.upload-recipe-header {
+	.upload-recipe-header__title {
+		color: var(--primary-heading-color);
+		margin-top: 0px;
+	}
+
+	.upload-recipe-header__subtitle {
+		background-color: #ebebeb;
+		padding-inline: 1rem;
+		padding-block: 1rem;
+		margin-block-end: 2rem;
+	}
+}
+
+.upload-recipe-form {
+	p {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.upload-recipe-form__submit-button {
+		background-color: var(--btn-primary-bgColor);
+		color: var(--btn-primary-textColor);
+		padding: var(--btn-primary-padding);
+		border-radius: var(--btn-primary-borderRadius);
+		border: var(--btn-primary-border);
+	}
+}

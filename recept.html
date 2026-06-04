@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Recept på pannkakor</title>
+		<link rel="stylesheet" href="./styles/_reset.css" />
+		<link rel="stylesheet" href="./styles/_layout.css" />
+		<link rel="stylesheet" href="./styles/globals.css" />
+		<link rel="stylesheet" href="./styles/recept.css" />
+	</head>
+	<body>
+		<header class="header-main">
+			<!-- Navigation menu -->
+			<nav>
+				<ul class="header-main__nav">
+					<li>
+						<a href="/index.html">
+							<!-- Logo image, redirects to home page -->
+							<figure class="header-main__logo-figure">
+								<img
+									src="/images/Official_CSS_Logo.png"
+									width="100%"
+									alt="CSS Logo"
+								/>
+							</figure>
+						</a>
+					</li>
+					<li class="header-main__nav-submenu">
+						<ul>
+							<li><a href="/recept.html">Recept</a></li>
+							<li>
+								<a href="/skicka-in-recept.html">Skicka in ditt recept</a>
+							</li>
+							<li><a href="/about.html">Om oss</a></li>
+							<li><a href="/kontakt.html">Kontakt</a></li>
+						</ul>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/recept.html">Recept</a>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/skicka-in-recept.html">Skicka in ditt recept</a>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/about.html">Om oss</a>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/kontakt.html">Kontakt</a>
+					</li>
+					<li class="header-main__nav-login-link">
+						<a href="#">Logga in</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<content class="content-container">
+				<section role="contentinfo" aria-label="recept">
+					<header class="recipes-list-header">
+						<h1 class="recipes-list-header__title">Recept</h1>
+					</header>
+					<section
+						class="recipes-grid"
+						id="recipes-grid"
+						role="contentinfo"
+						aria-label="recept lista"
+					></section>
+				</section>
+			</content>
+		</main>
+		<script>
+			const uploadedRecipes = Object.keys(localStorage).map((recipeKey) =>
+				JSON.parse(localStorage.getItem(recipeKey)),
+			);
+			const recipeListItem = document.getElementById("recipes-grid");
+			if (uploadedRecipes.length === 0) {
+				const p = document.createElement("p");
+				p.innerText = "Inga recept upplagda";
+				recipeListItem.append(p);
+			}
+			uploadedRecipes.forEach((recipe) => {
+				const article = document.createElement("article");
+				article.className = "recipe-list-item";
+				article.id = "recipe-list-item";
+
+				const imgLink = document.createElement("a");
+				imgLink.href = `/index.html`;
+
+				const figure = document.createElement("figure");
+				figure.className = "recipe-list-item__figure";
+
+				const img = document.createElement("img");
+				img.src = `./images/pannkakor_sylt_och_gradde.jpg`;
+				img.style.width = "100%";
+				img.alt = "Pannkakor serverat med sylt och grädde";
+
+				article.append(imgLink);
+				imgLink.append(figure);
+				figure.append(img);
+
+				const title = document.createElement("h2");
+				const titleLink = document.createElement("a");
+				titleLink.href = `/index.html`;
+				titleLink.innerText = recipe.recipe_name;
+				const description = document.createElement("p");
+				description.innerText = recipe.recipe_description;
+
+				const author = document.createElement("p");
+				author.innerText =
+					"Skapat av " +
+					recipe.author_name[0].toUpperCase() +
+					recipe.author_name.slice(1);
+
+				title.appendChild(titleLink);
+				article.append(title);
+				article.append(description);
+				article.append(author);
+
+				const removeRecipeButton = document.createElement("button");
+				removeRecipeButton.onclick = () => {
+					localStorage.removeItem(
+						`${recipe.author_name}-${recipe.recipe_name}`,
+					);
+					article.remove();
+					const recipeListItem = document.getElementById("recipes-grid");
+					const uploadedRecipes = Object.keys(localStorage).map((recipeKey) =>
+						JSON.parse(localStorage.getItem(recipeKey)),
+					);
+					if (uploadedRecipes.length === 0) {
+						const p = document.createElement("p");
+						p.innerText = "Inga recept upplagda";
+						recipeListItem.append(p);
+					}
+				};
+				removeRecipeButton.className = "delete-recipe-button";
+				removeRecipeButton.innerHTML = "Ta bort recept";
+				article.append(removeRecipeButton);
+
+				recipeListItem.append(article);
+			});
+		</script>
+	</body>
+</html>

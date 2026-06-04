@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kontakta oss</title>
+		<link rel="stylesheet" href="./styles/_reset.css" />
+		<link rel="stylesheet" href="./styles/_layout.css" />
+		<link rel="stylesheet" href="./styles/globals.css" />
+		<link rel="stylesheet" href="./styles/kontakt.css" />
+	</head>
+	<body>
+		<header class="header-main">
+			<!-- Navigation menu -->
+			<nav>
+				<ul class="header-main__nav">
+					<li>
+						<a href="/index.html">
+							<!-- Logo image, redirects to home page -->
+							<figure class="header-main__logo-figure">
+								<img
+									src="/images/Official_CSS_Logo.png"
+									width="100%"
+									alt="CSS Logo"
+								/>
+							</figure>
+						</a>
+					</li>
+					<li class="header-main__nav-submenu">
+						<ul>
+							<li><a href="/recept.html">Recept</a></li>
+							<li>
+								<a href="/skicka-in-recept.html">Skicka in ditt recept</a>
+							</li>
+							<li><a href="/about.html">Om oss</a></li>
+							<li><a href="/kontakt.html">Kontakt</a></li>
+						</ul>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/recept.html">Recept</a>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/skicka-in-recept.html">Skicka in ditt recept</a>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/about.html">Om oss</a>
+					</li>
+					<li class="header-main__submenu-responsive-list-item">
+						<a href="/kontakt.html">Kontakt</a>
+					</li>
+					<li class="header-main__nav-login-link">
+						<a href="#">Logga in</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<content class="content-container">
+				<section role="contentinfo">
+					<header class="contact-form-header">
+						<h1 class="contact-form-header__title">Kontaktformulär</h1>
+					</header>
+					<section role="contentinfo" aria-label="kontaktformulär">
+						<form id="contact-form" class="contact-form" method="post">
+							<p>
+								<label for="name">Namn:</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									autocomplete="name"
+									required
+								/>
+							</p>
+							<p>
+								<label for="mail">Email:</label>
+								<input
+									type="email"
+									id="mail"
+									name="email"
+									autocomplete="email"
+									required
+								/>
+							</p>
+							<p>
+								<label for="subject">Ämne:</label>
+								<select name="subject" id="subject" required>
+									<option value="product">Produkt</option>
+									<option value="support">Support</option>
+									<option value="sales">Försäljning</option>
+									<option value="marketing">Marknadsföring</option>
+								</select>
+							</p>
+							<p>
+								<label for="message">Meddelande:</label>
+								<textarea
+									required
+									id="message"
+									name="message"
+									maxlength="1000"
+								></textarea>
+							</p>
+							<p>
+								<button class="contact-form__submit-button" type="submit">
+									Skicka meddelande
+								</button>
+							</p>
+						</form>
+					</section>
+				</section>
+			</content>
+		</main>
+		<script>
+			const form = document.getElementById("contact-form");
+			form.addEventListener("submit", (event) => {
+				event.preventDefault();
+				const formData = new FormData(event.target);
+				const formObject = Object.fromEntries(formData.entries());
+				const { name, email, subject, message } = formObject;
+				alert(`Message sent!`);
+				form.reset();
+			});
+		</script>
+	</body>
+</html>

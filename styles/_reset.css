@@ -1,0 +1,50 @@
+/* makes sizing simpler */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+:root {
+	--primary-bg-color: #a100004d;
+	--default-padding: 2rem;
+	--default-margin-vertical: 2rem;
+	--primary-heading-color: #a10000;
+
+	/* fonts */
+	--ff-main: Raleway, sans-serif;
+	--ff-headings: "Josefin Sans", sans-serif;
+
+	/* line-heights */
+	--lh-tight: 1;
+	--lh-normal: 1.5;
+}
+
+body {
+	background-color: var(--primary-bg-color);
+	font-family: var(--ff-main);
+	font-optical-sizing: auto;
+
+	/* Increase line-height for better readability */
+	line-height: var(--lh-normal);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--ff-headings);
+	/* less line-height on headings to keep them more compact */
+	/* usually 1.1 or maybe 1 depending on font choice */
+	line-height: var(--lh-tight);
+}
